@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="navigation">
+		<!-- avatar -->
+		<div class="avatar">
+			<img src="assets/avatar.jpg" alt="" class="avatar__image">
+			<h1 class="avatar__name"> Maria D. </h1>
+			<p class="avatar__profissinal"> Design </p>
+		</div>
+
+		<!-- status -->
+		<div class="status">
+			<div class="status__items">
+				<i class="far fa-laugh-wink"></i>
+				<p class="status__title"> Satisfação </p>
+				<span class="status__result"> 95,4% </span>
+			</div>
+
+			<div class="status__items">
+				<i class="fas fa-hand-holding-usd"></i>
+				<p class="status__title"> Saldo atual </p>
+				<span class="status__result"> R$1.000,00 </span>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- paninel -->
+	<div class="panel">
+		<div class="panel__header">
+			<div class="panel__title">
+				<div class="title">
+					<i class="fas fa-euro-sign"></i>
+					<h1>Dashborad</h1>			
+				</div>
+				
+				<div class="panel__subtitle">
+					<p>Balanceamento 2020</p>
+				</div>
+			</div>
+
+			<button class="button__panel__login">
+				<span>Sign in</span>
+				<i class="fas fa-sign-in-alt"></i>
+			</button>
+		</div>
+
+		<div class="dash">
+			<div class="grafico">
+				<canvas id="chart"></canva>
+			</div>
+
+			<div class="cards">
+				<div class="card__items">
+					<h1> Scala de +- </h1>
+                    
+                    <div class="list">
+                    	<p>Empresa</p>
+                    	<div>
+                    		<i class="fas 
+                    		fa-arrow-down"></i>
+                    		<span>20%</span>
+	                    </div>
+                    </div>
+                      
+                    <div class="list">
+                    	<p>Residencia</p>
+                    	<div>
+                    		<i class="fas fa-arrow-up"></i>
+                    		<span>73,4%</span>
+                    	</div>
+                    </div>
+
+                    <div class="list">
+                    	<p>Lazer</p>
+                    	<div>
+                    		<i class="fas fa-arrow-up"></i>
+                    		<span>73,4%</span>
+                    	</div>
+                    </div>
+
+                    <div class="list">
+                    	<p>Trabalho</p>
+                    	<div>
+                    		<i class="fas fa-arrow-up"></i>
+                    		<span>73,4%</span>
+                    	</div>
+                    </div>  
+				</div>
+
+				<div class="card__items">
+					<h1>Satisfação</h1>
+					<div class="ilustrer">
+						<svg height="800" width="800">
+							<circle 
+								cx="100" 
+								cy="100" 
+								r='70' 
+								stroke="#808080" 
+								stroke-width="3"
+								stroke-dasharray="200"
+								stroke-dashoffset="-170" 
+								fill="transparent"/>
+						</svg>
+
+						<img src="assets/emoji_ok.png" alt="" width="50">
+						<p>95,4%</p>						
+					</div>
+					<div class="porcents">
+						<p>0%</p>
+						<p>100%</p>
+					</div>
+				</div>
+
+				<div class="card__items">
+					<img src="assets/money.png" alt="" width="80">
+					<p>
+						Quer saber como andam seu money clique no
+						botão a baixo.
+					</p>
+					<button>
+						<i class="fas fa-search"></i>
+						<span>Visualizar</span>
+					</button>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+
+	<script>
+		const element = document.querySelector('#chart');
+		element.height = 50;
+
+		const chart = new Chart(element,  {
+			type: 'line',
+
+			data: {
+				labels: [
+					'Janeiro',
+					'Fevereiro',
+					'Março',
+					'Abril',
+					'Maio',
+					'Junho',
+					'Julho',
+					'Agosto',
+					'Setembro',
+					'Outubro',
+					'Novembro',
+					'Dezembro'
+				],
+
+				datasets: [{
+				label: 'My first',
+				backgroundColor: 'rgba(0,0,0,.0)',
+				borderColor: 'rgba(0,0,0,.8)',
+				data: [
+					0, 
+					100, 
+					30, 
+					70,
+					65]
+				}],
+
+				// options: {
+				// 	scale: {
+				// 		yAyes : [{
+				// 			stacked: true
+				// 		}]
+				// 	},
+
+				// 	data: [{
+				// 		x: 100,
+				// 		y: 100
+				// 	}]
+				// }
+			}
+		})
+	</script>
+</body>
+</html>
