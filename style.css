@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+	--color-white: #fff;
+	--color-white-dark: #DBDBDB;
+	--bg-blue-dark: #272E40;
+	--bg-blue-mont: #3C5490;
+	--bg-blue-mint: #6D87C7;
+	--color-orange: #FCA70D;
+	--color-orange-dark: #BA811B;
+}
+
 *,
 html,
 #root {
@@ -14,6 +24,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
 	color: #808080;
+	background-color: var(--bg-blue-mont);
 }
 
 .navigation {
@@ -28,6 +39,8 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	background-color: var(--bg-blue-dark);
+	color: var(--color-white);
 }
 
 .navigation
@@ -38,7 +51,7 @@ body {
 	left: 20px;
 	width: 100px;
 	border-radius: 100px;
-	border: 2px solid #fff;
+	border: 2px solid var(--bg-blue-mont);
 }
 
 .navigation
@@ -77,6 +90,7 @@ body {
 .status__items i {
 	margin-bottom: 10px;
 	font-size: 45px;
+	color: var(--bg-blue-mint);
 }
 
 .navigation
@@ -91,6 +105,7 @@ body {
 .status__items
 .status__result {
 	font-weight: 200;
+	color: var(--color-white-dark);
 }
 
 .panel {
@@ -115,6 +130,7 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	color: var(--color-white);
 }
 
 .panel
@@ -122,6 +138,7 @@ body {
 .panel__title
 .title h1 {
 	font-size: 36px;
+	color: var(--color-white);
 }
 
 .panel
@@ -139,6 +156,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: var(--color-orange);
+	background-color: var(--color-white);
 }
 
 .panel
@@ -146,6 +165,7 @@ body {
 .panel__title
 .panel__subtitle {
 	margin-left: 66px;
+	color: var(--color-white);
 }
 
 .panel
@@ -162,6 +182,18 @@ body {
 	border-radius: 100px;
 	box-shadow: 2px 2px 2px rgba(0,0,0,.3);
 	cursor: pointer;
+	background: linear-gradient(var(--bg-blue-mint), var(--bg-blue-dark));
+	color: var(--color-white);
+	transition: .3s ease-in-out;
+}
+
+
+.panel
+.panel__header
+.button__panel__login:hover {
+	background: linear-gradient(var(--bg-blue-dark), var(--bg-blue-mint));
+	box-shadow: 0px 0px 0px rgba(0,0,0,.0);
+	opacity: .6;
 }
 
 .panel
@@ -194,7 +226,9 @@ body {
 	border-radius: 20px;
 	overflow: hidden;
 	padding: 15px;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.4)
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+	background-color: var(--bg-blue-mint);
+	color: var(--color-white);
 }
 
 .dash
@@ -301,13 +335,14 @@ body {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	color: var(--color-orange-dark);
 }
 
 
 .dash
 .cards
 .card__items:nth-child(3) button i {
-	background-color: #303030;
+	background-color: var(--color-orange-dark);
 	border-radius: 100px;
 	width: 30px;
 	height: 30px;
@@ -315,7 +350,15 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fff;
+	color: var(--color-white);
+}
+
+.fa-arrow-up {
+	color: green;
+}
+
+.fa-arrow-down {
+	color: red;
 }
 
 

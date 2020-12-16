@@ -105,7 +105,7 @@
 								cx="100" 
 								cy="100" 
 								r='70' 
-								stroke="#808080" 
+								stroke="var(--color-orange)" 
 								stroke-width="3"
 								stroke-dasharray="200"
 								stroke-dashoffset="-170" 
@@ -141,9 +141,38 @@
 	<script>
 		const element = document.querySelector('#chart');
 		element.height = 50;
+		
 
 		const chart = new Chart(element,  {
 			type: 'line',
+			options : {
+				legend : {
+					display: false
+				},
+
+				scales: {
+					yAxes: [{
+						gridLines: {
+							display: false
+						},
+						ticks: {
+							fontColor: "#fff",
+							display: false,
+						}
+					}],
+					xAxes: [{
+						gridLines: {
+							display: false
+						},
+						ticks: {
+							fontColor: "#fff"
+						}
+					}]
+				},
+
+
+			},
+
 
 			data: {
 				labels: [
@@ -163,8 +192,10 @@
 
 				datasets: [{
 				label: 'My first',
-				backgroundColor: 'rgba(0,0,0,.0)',
-				borderColor: 'rgba(0,0,0,.8)',
+				backgroundColor: 'transparent',
+				borderColor: '#fff',
+				pointBackgroundColor: "orange",
+				pointBorderColor: "orange",
 				data: [
 					0, 
 					100, 
@@ -173,18 +204,6 @@
 					65]
 				}],
 
-				// options: {
-				// 	scale: {
-				// 		yAyes : [{
-				// 			stacked: true
-				// 		}]
-				// 	},
-
-				// 	data: [{
-				// 		x: 100,
-				// 		y: 100
-				// 	}]
-				// }
 			}
 		})
 	</script>
